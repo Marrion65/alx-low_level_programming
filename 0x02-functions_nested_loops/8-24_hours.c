@@ -14,7 +14,6 @@ void jack_bauer(void)
 	 * d = minutes in unit i.e 9
 	 * from 23:59
 	 */
-
 	while (m < 1440) /*60 times 24 = 1440, so we have 1440 mins in 24hrs*/
 	{
 		_putchar(a + '0'); /*print a added to 0 char bit*/

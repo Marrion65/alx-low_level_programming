@@ -2,34 +2,32 @@
 
 /**
  * print_triangle - print a triangle aligned right, using '#'
- * @size: height of triangle
+ * @size: Size of triangle
  */
-
 void print_triangle(int size)
 {
+	int c, i, j;
 
-	int s, b;
-
-	s = 0;
-
-	b = size;
-
-    /*for all i up to the forth */
-	for (int i = 0; i < size; i++)
+	c = 0;
+	i = size - 1;
+	while (c < size)
 	{
-		s = s + 1;
-		b = b - 1;
-
-		for (int d = b; d > 0; d--)
+		i = size - 1 - c;
+		j = c + 1;
+		while (i > 0)
 		{
 			_putchar(' ');
+			i--;
 		}
-
-		for (int j = 0; j < s; j++)
+		while (j > 0)
 		{
 			_putchar('#');
+			j--;
 		}
-
 		_putchar('\n');
+		c++;
 	}
+
+	if (size <= 0)
+		_putchar('\n');
 }
